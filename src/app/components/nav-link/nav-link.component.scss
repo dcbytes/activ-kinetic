@@ -1,0 +1,40 @@
+@import "../../../styles/colors.scss";
+
+.nav-link-anchor {
+  text-decoration: none;
+  color: #414141;
+}
+
+.nav-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    font-size: 20px;
+  }
+
+  i {
+    font-size: 20px;
+  }
+
+  hr {
+    position: absolute;
+    background-color: map-get($colors, secondary);
+    border-radius: 2px;
+    width: 120%;
+    height: 2px;
+    border: 1px solid map-get($colors, secondary);
+    bottom: -15px;
+  }
+}
+
+.nav-link hr {
+  display: none;
+}
+
+// if nav-link is active, make hr visible, otherwise hide it
+.nav-link.active hr {
+  display: block;
+}

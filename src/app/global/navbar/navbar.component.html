@@ -1,0 +1,15 @@
+<div class="navbar">
+  <div class="navbar-logo">
+    <img src="/logo.png" alt="Activ Kinetic" />
+  </div>
+  <div class="navbar-links">
+    @for (link of navLinks; track link.text) {
+      <app-nav-link
+        [link]="link.link"
+        [icon]="link.icon"
+        [text]="link.text"
+        [activeRoute]="currentRoute.endsWith(link.link)"
+      ></app-nav-link>
+    }
+  </div>
+</div>

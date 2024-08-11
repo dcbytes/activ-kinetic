@@ -1,0 +1,18 @@
+@import "primeicons/primeicons.css";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+@import "./styles/colors.scss";
+@import "./styles/variables.scss";
+@import "./styles/typography.scss";
+@import "./styles/buttons.scss";
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}

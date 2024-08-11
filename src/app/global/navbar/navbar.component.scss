@@ -1,0 +1,31 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  padding: var(--navbar-padding);
+  height: var(--navbar-computed-height);
+  padding-inline: 10rem;
+}
+
+.navbar-logo {
+  width: 183px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 1028px) {
+  .navbar {
+    height: var(--navbar-height-small);
+    padding-inline: 5rem;
+  }
+}

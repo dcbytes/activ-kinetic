@@ -1,0 +1,66 @@
+.headliner {
+  background-image: url("/doctor_umar.jpg");
+  display: flex;
+  height: 700px;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+.headliner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Adjust the last value to change the darkness */
+}
+
+.headliner-content {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  z-index: 1;
+  gap: 3rem;
+
+  h1 {
+    font-size: 2.6rem;
+    color: #fff;
+  }
+}
+
+.headliner-content-details {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 2.8rem;
+    color: #efefef;
+    font-weight: 600;
+  }
+
+  h3 {
+    margin-top: -0.6rem;
+    font-size: 1.8rem;
+    color: #efefef;
+    font-weight: 400;
+  }
+}
+
+.action-buttons {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}

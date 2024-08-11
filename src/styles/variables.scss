@@ -1,0 +1,17 @@
+:root {
+  /* Sizes */
+  --navbar-height-large: 4.375rem;
+  --navbar-height-small: 3.75rem;
+  --navbar-padding: 2rem;
+  --navbar-computed-height: calc(
+    var(--navbar-height-large) + var(--navbar-padding)
+  );
+}
+
+@media screen and (max-width: 1028px) {
+  :root {
+    --navbar-computed-height: calc(
+      var(--navbar-height-small) + var(--navbar-padding)
+    );
+  }
+}
