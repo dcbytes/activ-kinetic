@@ -1,0 +1,19 @@
+@import "../../../styles.scss";
+
+.separator-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  hr {
+    position: absolute;
+    background-color: map-get($colors, secondary);
+    border: 0;
+    height: 1px;
+    border-radius: 1px;
+    width: 100vw;
+    margin: 0 auto;
+    z-index: 1;
+  }
+}

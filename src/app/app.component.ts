@@ -5,6 +5,9 @@ import { NavbarComponent } from './global/navbar/navbar.component';
 import { HeadlinerComponent } from './sections/headliner/headliner.component';
 import { RippleModule } from 'primeng/ripple';
 import { PrimeNGConfig } from 'primeng/api';
+import { LocationComponent } from './sections/location/location.component';
+import { SeparatorComponent } from './components/separator/separator.component';
+import { ProcedureComponent } from './sections/procedure/procedure.component';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +18,9 @@ import { PrimeNGConfig } from 'primeng/api';
     NavbarComponent,
     HeadlinerComponent,
     RippleModule,
+    LocationComponent,
+    SeparatorComponent,
+    ProcedureComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

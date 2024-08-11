@@ -1,0 +1,16 @@
+.separator-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  overflow: hidden;
+  z-index: 2;
+
+  span {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    background-color: map-get($colors, secondary);
+  }
+}

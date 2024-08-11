@@ -1,0 +1,10 @@
+@import "../../../styles.scss";
+
+.procedure {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  align-items: start;
+  padding: 0 2rem;
+}
