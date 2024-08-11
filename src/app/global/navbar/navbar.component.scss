@@ -12,6 +12,12 @@
   padding: var(--navbar-padding);
   height: var(--navbar-computed-height);
   padding-inline: 10rem;
+  transition: all 0.3s;
+}
+
+.navbar.scrolled {
+  transition: all 0.3s;
+  transform: translateY(-100%);
 }
 
 .navbar-logo {

@@ -1,5 +1,5 @@
 import { AsyncPipe, CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NavLinkComponent } from '../../components/nav-link/nav-link.component';
 import { Subscription } from 'rxjs';
 import { NavigationEnd, Router } from '@angular/router';
@@ -17,6 +17,9 @@ export class NavbarComponent implements OnInit {
   private routeSubscription!: Subscription;
   currentRoute: string = this.router.url;
 
+  lastScrollTop: number = 0;
+  isScrolled: boolean = false;
+
   // Declare the nav links
   navLinks = [
     { link: '#despre', text: 'Despre', icon: 'pi pi-info-circle' },
@@ -30,5 +33,16 @@ export class NavbarComponent implements OnInit {
         this.currentRoute = this.router.url;
       }
     });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    let st = window.pageYOffset || document.documentElement.scrollTop;
+    if (st > this.lastScrollTop) {
+      this.isScrolled = true;
+    } else {
+      this.isScrolled = false;
+    }
+    this.lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
   }
 }
