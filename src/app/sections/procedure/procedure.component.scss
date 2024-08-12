@@ -8,3 +8,17 @@
   align-items: start;
   padding: 0 2rem;
 }
+
+.procedure-description {
+  span {
+    color: #000;
+    font-size: 1.35rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .procedure {
+    padding: 0 1rem;
+  }
+}
