@@ -3,9 +3,19 @@
   pButton
   pRipple
   (click)="onClick()"
+  [disabled]="disabled"
   class="k-button bg-primary"
 >
-  <span>
-    {{ label }}
-  </span>
+  <div class="button-and-spinner">
+    @if (loading) {
+      <p-progressSpinner
+        [style]="{ width: '25px', height: '25px' }"
+        strokeWidth="2"
+        animationDuration=".5s"
+      />
+    }
+    <span>
+      {{ label }}
+    </span>
+  </div>
 </button>

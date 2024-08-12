@@ -1,0 +1,78 @@
+<form class="gform" [formGroup]="contactForm" (ngSubmit)="submitForm()">
+  <div class="evaluate-form">
+    <div class="form-content">
+      <p-inputGroup>
+        <div class="input-group row">
+          <input
+            type="text"
+            required
+            pInputText
+            name="nume"
+            placeholder="Nume"
+            [attr.disabled]="loading || alreadySubmitted"
+            [formControlName]="contactFormControls.FIRST_NAME"
+          />
+          <input
+            type="text"
+            required
+            pInputText
+            name="prenume"
+            placeholder="Prenume"
+            [attr.disabled]="loading || alreadySubmitted"
+            [formControlName]="contactFormControls.LAST_NAME"
+          />
+        </div>
+      </p-inputGroup>
+      <p-inputGroup>
+        <div class="input-group">
+          <input
+            type="tel"
+            required
+            pInputText
+            name="telefon"
+            placeholder="Numar Telefon"
+            [attr.disabled]="loading || alreadySubmitted"
+            [formControlName]="contactFormControls.PHONE"
+          />
+        </div>
+      </p-inputGroup>
+      <p-inputGroup>
+        <div class="input-group">
+          <input
+            type="mail"
+            pInputText
+            required
+            name="email"
+            placeholder="Adresa de Email"
+            [attr.disabled]="loading || alreadySubmitted"
+            [formControlName]="contactFormControls.EMAIL"
+          />
+        </div>
+      </p-inputGroup>
+      <p-inputGroup>
+        <div class="input-group">
+          <textarea
+            pInputText
+            placeholder="Detalii"
+            required
+            name="detalii"
+            rows="4"
+            cols="50"
+            [attr.disabled]="loading || alreadySubmitted"
+            [formControlName]="contactFormControls.DETAILS"
+          ></textarea>
+        </div>
+      </p-inputGroup>
+    </div>
+
+    <div class="graphic_container">
+      <img src="/graphic_contact.png" alt="Evaluare" />
+    </div>
+  </div>
+  <app-k-button
+    label="Trimite"
+    type="submit"
+    [disabled]="loading || alreadySubmitted"
+    [loading]="loading"
+  ></app-k-button>
+</form>
