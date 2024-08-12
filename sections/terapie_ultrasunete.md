@@ -1,6 +1,6 @@
 ### Aceasta utilizează unde sonore de înaltă frecvență pentru a penetra țesuturile profunde, stimulând vindecarea și reducând durerea.
 
-<img src="/ultrasunete_1.jpeg" width="400" alt="terapie_ultrasunete" />
+<img src="ultrasunete_1.jpeg" width="400" alt="terapie_ultrasunete" />
 
 ## Ce tratăm cu terapia cu ultrasunete:
 

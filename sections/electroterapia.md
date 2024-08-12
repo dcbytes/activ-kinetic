@@ -1,6 +1,6 @@
 ### Electroterapia implică utilizarea curentului electric pentru a stimula mușchii și nervii, fiind eficientă în ameliorarea durerii și recuperarea funcțională.
 
-<img src="/electroterapie_1.jpeg" width="400" alt="electroterapie" />
+<img src="electroterapie_1.jpeg" width="400" alt="electroterapie" />
 
 ## Ce tratăm cu electroterapia:
 
