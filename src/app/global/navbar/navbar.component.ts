@@ -14,6 +14,8 @@ import { NavigationEnd, Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   constructor(private readonly router: Router) {}
 
+  private observer!: IntersectionObserver;
+
   private routeSubscription!: Subscription;
   currentRoute: string = this.router.url;
 
@@ -33,6 +35,26 @@ export class NavbarComponent implements OnInit {
         this.currentRoute = this.router.url;
       }
     });
+
+    // this.observer = new IntersectionObserver(
+    //   (entries) => {
+    //     entries.forEach((entry) => {
+    //       if (entry.isIntersecting) {
+    //         this.currentRoute = `/#${entry.target.id}`;
+    //       }
+    //     });
+    //   },
+    //   {
+    //     rootMargin: '0px 0px -50% 0px',
+    //   },
+    // );
+    //
+    // this.navLinks.forEach((navLink) => {
+    //   const section = document.querySelector(navLink.link);
+    //   if (section) {
+    //     this.observer.observe(section);
+    //   }
+    // });
   }
 
   @HostListener('window:scroll', [])

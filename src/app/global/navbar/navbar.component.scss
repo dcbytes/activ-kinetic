@@ -15,11 +15,6 @@
   transition: all 0.3s;
 }
 
-.navbar.scrolled {
-  transition: all 0.3s;
-  transform: translateY(-100%);
-}
-
 .navbar-logo {
   width: 183px;
 }
@@ -29,9 +24,28 @@
   gap: 2rem;
 }
 
+@media screen and (min-width: 1028px) {
+  .navbar.scrolled {
+    transition: all 0.3s;
+    transform: translateY(-100%);
+  }
+}
+
 @media screen and (max-width: 1028px) {
   .navbar {
     height: var(--navbar-height-small);
-    padding-inline: 5rem;
+    bottom: 0;
+    top: unset;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .navbar-logo {
+    display: none;
+  }
+
+  .navbar-links {
+    justify-content: center;
+    width: 100%;
   }
 }

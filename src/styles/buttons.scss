@@ -12,3 +12,11 @@
     font-size: 1.4rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .k-button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}

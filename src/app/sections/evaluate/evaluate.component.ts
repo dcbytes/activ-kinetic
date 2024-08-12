@@ -94,7 +94,8 @@ export class EvaluateComponent implements OnInit {
           this.messageService.add({
             severity: 'success',
             summary: 'Success',
-            detail: 'Your message has been sent.',
+            detail:
+              'Mesajul a fost trimis! Vei fi contactat in cel mai scurt timp posibil.',
           });
           this.contactForm.reset();
           this.loading = false;
@@ -105,7 +106,8 @@ export class EvaluateComponent implements OnInit {
           this.messageService.add({
             severity: 'error',
             summary: 'Error',
-            detail: 'An error occurred while sending your message.',
+            detail:
+              'A aparut o eroare la trimiterea mesajului. Te rugam sa incerci din nou.',
           });
           this.loading = false;
         },

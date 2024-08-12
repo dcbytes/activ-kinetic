@@ -14,3 +14,15 @@
     background-color: map-get($colors, secondary);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .separator-title {
+    span {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.btn-anchor {
+  text-decoration: none;
+}
