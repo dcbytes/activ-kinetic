@@ -1,6 +1,6 @@
 ### Masajul terapeutic este o metodă de tratament care implică manipularea mușchilor și a țesuturilor moi pentru a îmbunătăți sănătatea generală și a ameliora diverse afecțiuni.
 
-<img src="/masaj_1.jpeg" width="400" alt="masaj" />
+<img src="masaj_1.jpeg" width="400" alt="masaj" />
 
 ## Ce tratăm cu masajul terapeutic:
 
