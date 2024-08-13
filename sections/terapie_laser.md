@@ -2,7 +2,7 @@
 
 <img src="laser_1.jpeg" width="400" alt="terapie_laser" />
 
-## Ce tratăm cu terapia cu laser:
+## Ce tratăm prin terapia cu laser:
 
 * Dureri musculare și articulare
 * Leziuni sportive
