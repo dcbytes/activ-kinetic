@@ -2,7 +2,7 @@
 
 <img src="electroterapie_1.jpeg" width="400" alt="electroterapie" />
 
-## Ce tratăm prin electroterapia:
+## Ce tratăm prin electroterapie:
 
 - Dureri acute și cronice
 - Leziuni nervoase
