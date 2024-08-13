@@ -179,3 +179,12 @@
     padding-bottom: 0;
   }
 }
+
+@media screen and (max-height: 680px) {
+  .action-buttons {
+    padding-inline: 1rem;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+  }
+}

@@ -36,7 +36,7 @@ import { MessageService } from 'primeng/api';
 })
 export class EvaluateComponent implements OnInit {
   private url =
-    'https://script.google.com/macros/s/AKfycby6SCYqcMWwzZLkjOXy1Ygoed682jw6z1-YNsK-Zd1oY-N1fWt9OhNTrW0oVGBco_6PHQ/exec';
+    'https://script.google.com/macros/s/AKfycbxmfuVKmW9TFHZEhp_Y03YoO4b7QnNzmPlT6j5UvWct1CmtDY9vN1cSGRJqwkPw0_ebaA/exec';
 
   loading = false;
   alreadySubmitted = false;
