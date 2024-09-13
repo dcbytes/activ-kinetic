@@ -1,9 +1,15 @@
-<p-toast [life]="10000"/>
+<p-toast [life]="10000" />
 <app-navbar />
 <div class="main-content">
   <app-headliner id="despre" fragment="despre"></app-headliner>
-  <div class="center">
-    <app-location></app-location>
+  <div class="safe-container">
+    <div class="center">
+      <app-location></app-location>
+    </div>
+    <app-procedure
+      procedure="Despre"
+      markdownFile="sections/despre.md"
+    ></app-procedure>
   </div>
   <app-separator
     id="tratamente"

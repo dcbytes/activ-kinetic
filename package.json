@@ -23,6 +23,7 @@
     "@angular/ssr": "^18.1.3",
     "express": "^4.18.2",
     "marked": "^12.0.2",
+    "ngx-lottie": "^12.0.0",
     "ngx-markdown": "^18.0.0",
     "ngx-page-scroll": "^13.0.0",
     "primeicons": "^7.0.0",

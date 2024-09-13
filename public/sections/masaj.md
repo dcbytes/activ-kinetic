@@ -2,7 +2,7 @@
 
 <img src="masaj_1.jpeg" width="400" alt="masaj" />
 
-## Ce tratăm cu masajul terapeutic:
+## Ce tratăm prin masajul terapeutic:
 
 - Dureri musculare și articulare
 - Tensiuni și spasme musculare

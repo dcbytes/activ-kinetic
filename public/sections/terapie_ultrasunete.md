@@ -2,7 +2,7 @@
 
 <img src="ultrasunete_1.jpeg" width="400" alt="terapie_ultrasunete" />
 
-## Ce tratăm cu terapia cu ultrasunete:
+## Ce tratăm prin terapia cu ultrasunete:
 
 - Tendinite și bursite
 - Contracturi musculare

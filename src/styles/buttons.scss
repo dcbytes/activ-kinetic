@@ -1,15 +1,27 @@
-@import "./colors.scss";
+@use "./colors";
 
 .k-button {
-  color: #fff;
-  padding: 0.5rem 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: map-get(colors.$colors, primary);
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 10px 24px;
+  cursor: pointer;
+  // transition for background-color
+  transition: background-color 0.2s;
 
-  &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(242, 153, 74, 0.25);
-  }
+  width: 180px;
 
-  span {
-    font-size: 1.4rem;
+  border: 2px solid map-get(colors.$colors, primary);
+
+  &.outlined {
+    background-color: transparent !important;
+    color: white;
+    border-color: white !important;
   }
 }
 

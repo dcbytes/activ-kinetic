@@ -1,7 +1,23 @@
 .button-and-spinner {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 1rem;
+  align-items: baseline;
+  width: 100%;
+
+  *:not(span) {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 768px) {
+      justify-content: flex-start;
+      padding-left: 1rem;
+    }
+  }
+
+  span {
+    text-align: right;
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+  }
 }

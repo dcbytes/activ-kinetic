@@ -2,7 +2,7 @@
 
 <img src="kineto_1.jpeg" width="400" alt="kinetoterapie" />
 
-## Ce tratăm cu kinetoterapie:
+## Ce tratăm prin kinetoterapie:
 
 * Recuperarea post-operatorie și post-traumatică
 * Afecțiuni ale coloanei vertebrale, precum scolioza, hernia de disc și spondiloza

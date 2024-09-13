@@ -1,7 +1,8 @@
 <div class="headliner">
   <div class="headliner-content">
-    <img src="logo.png" alt="Activ Kinetic" class="mobile-logo" />
-    <img src="doctor_umar.jpg" alt="Headliner" class="mobile-headliner-img" />
+    <div class="mobile-logo-container">
+      <img src="logo-white.png" alt="Activ Kinetic" class="mobile-logo" />
+    </div>
     <div class="mobile-safe-content">
       <h1 class="headliner-title">Activ Kinetic</h1>
       <div class="headliner-content-details">
@@ -10,11 +11,20 @@
       </div>
       <div class="action-buttons">
         <a href="#tratamente" class="btn-anchor">
-          <app-k-button label="Tratamente"></app-k-button>
+          <app-k-button label="Tratamente" icon="asterisk"></app-k-button>
         </a>
         <a href="#evaluare" class="btn-anchor">
-          <app-k-button label="Evaluare"></app-k-button>
+          <app-k-button
+            variant="outlined"
+            icon="file-edit"
+            label="Evaluare"
+          ></app-k-button>
         </a>
+      </div>
+      <div class="hero-scroll-icon-container">
+        <div class="hero-scroll-icon">
+          <ng-lottie [options]="lottieOptions"></ng-lottie>
+        </div>
       </div>
     </div>
   </div>

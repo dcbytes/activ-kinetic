@@ -18,6 +18,15 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.safe-container {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  align-self: center;
+  flex-direction: column;
 }
 
 .procedures {

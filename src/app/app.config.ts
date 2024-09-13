@@ -12,6 +12,8 @@ import { MessageService } from 'primeng/api';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { provideMarkdown } from 'ngx-markdown';
 import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
+import { provideLottieOptions } from 'ngx-lottie';
+import player from 'lottie-web';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -21,6 +23,9 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideHttpClient(withFetch()),
     provideMarkdown({ loader: HttpClient }),
+    provideLottieOptions({
+      player: () => player,
+    }),
     MessageService,
     importProvidersFrom(
       NgxPageScrollCoreModule.forRoot({

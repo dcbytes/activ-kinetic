@@ -22,6 +22,10 @@ export class KButtonComponent {
 
   @Input() loading: boolean = false;
 
+  @Input() variant: 'filled' | 'outlined' = 'filled';
+
+  @Input() icon: string = '';
+
   @Output()
   clickEventEmitter: EventEmitter<void> = new EventEmitter<void>();
 

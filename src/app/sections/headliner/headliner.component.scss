@@ -18,12 +18,11 @@
     0,
     0,
     0,
-    0.4
+    0.6
   ); /* Adjust the last value to change the darkness */
 }
 
 .headliner-content {
-  width: 400px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -31,6 +30,11 @@
   padding: 2rem;
   z-index: 1;
   gap: 3rem;
+
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+    padding-bottom: 1rem !important;
+  }
 
   h1 {
     font-size: 2.6rem;
@@ -46,6 +50,14 @@
     font-size: 2.8rem;
     color: #efefef;
     font-weight: 600;
+
+    @media screen and (max-width: 768px) {
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: 24px;
+    }
   }
 
   h3 {
@@ -53,20 +65,27 @@
     font-size: 1.8rem;
     color: #efefef;
     font-weight: 400;
+
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: 16px;
+    }
   }
 }
 
 .action-buttons {
-  position: absolute;
   bottom: 2rem;
-  width: 100%;
   display: flex;
-  justify-content: center;
   gap: 1rem;
 }
 
 .mobile-logo,
-.mobile-headliner-img {
+.mobile-headliner-img,
+.mobile-logo-container,
+.hero-scroll-icon-container {
   display: none;
 }
 
@@ -80,32 +99,23 @@
 @media screen and (max-width: 768px) {
   .headliner {
     width: 100%;
-    height: calc(100vh - var(--navbar-computed-height));
+    height: calc(100svh - var(--navbar-computed-height) + 50px);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 
-    &::before {
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.05) 0%,
-        rgba(0, 0, 0, 0.4) 50%,
-        rgba(255, 255, 255, 0.3) 80%,
-        rgba(255, 255, 255, 0.95) 100%
-      );
-
-      backdrop-filter: brightness(0.7) blur(10px);
-      // darken the image
-    }
-  }
-
-  .headliner-content-details {
-    h1 {
-      font-size: 2rem;
-    }
-    h3 {
-      font-size: 1.4rem;
-    }
+    // &::before {
+    //   background: linear-gradient(
+    //     180deg,
+    //     rgba(0, 0, 0, 0.05) 0%,
+    //     rgba(0, 0, 0, 0.4) 50%,
+    //     rgba(255, 255, 255, 0.3) 80%,
+    //     rgba(255, 255, 255, 0.95) 100%
+    //   );
+    //
+    //   backdrop-filter: brightness(0.7) blur(10px);
+    //   // darken the image
+    // }
   }
 
   .headliner-title {
@@ -113,16 +123,21 @@
   }
 
   .mobile-logo {
-    margin-top: 2rem;
-    margin-left: 2rem;
-    margin-bottom: 1rem;
-    display: block;
     width: 160px;
+    display: flex;
   }
 
   .mobile-headliner-img {
     display: block;
     width: 100%;
+  }
+
+  .mobile-logo-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 
   .headliner-content {
@@ -141,50 +156,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1.6rem;
 
     .btn-anchor {
-      width: 200px;
+      width: 100%;
     }
+  }
 
-    app-k-button {
-      width: 200px;
-      text-align: center;
-      justify-content: center;
-    }
+  .hero-scroll-icon-container {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-scroll-icon {
+    display: flex;
+    width: 56px;
+    justify-content: center;
   }
 }
 
 @media screen and (max-height: 780px) {
-  .headliner-content-details {
-    h1 {
-      font-size: 1.6rem;
-    }
-    h3 {
-      font-size: 1rem;
-    }
-  }
-
   // smaller gaps
   .headliner-content {
     gap: 1rem;
   }
 
-  .action-buttons {
-    gap: 0.5rem;
-  }
-
   .mobile-safe-content {
-    gap: 0.5rem;
+    gap: 2rem;
     padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-@media screen and (max-height: 680px) {
-  .action-buttons {
-    padding-inline: 1rem;
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: center;
+    padding-bottom: 50px;
   }
 }

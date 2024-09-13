@@ -4,9 +4,12 @@
   pRipple
   (click)="onClick()"
   [disabled]="disabled"
-  class="k-button bg-primary"
+  [class]="'k-button bg-primary ' + variant"
 >
   <div class="button-and-spinner">
+    <span>
+      {{ label }}
+    </span>
     @if (loading) {
       <p-progressSpinner
         [style]="{ width: '25px', height: '25px' }"
@@ -14,8 +17,8 @@
         animationDuration=".5s"
       />
     }
-    <span>
-      {{ label }}
-    </span>
+    @if (icon) {
+      <i class="pi pi-{{ icon }}"></i>
+    }
   </div>
 </button>
