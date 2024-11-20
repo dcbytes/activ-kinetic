@@ -1,0 +1,31 @@
+<footer>
+  <div class="logo-and-links-container">
+    <div class="navbar-logo">
+      <img src="logo.png" alt="Activ Kinetic" />
+    </div>
+    <div class="navbar-links">
+      @for (link of navLinks; track link.text) {
+        <a [href]="link.link" pageScroll>{{ link.text }}</a>
+      }
+    </div>
+    <div class="navbar-social-links">
+      <a
+        href="https://www.facebook.com/profile.php?id=61556653857157"
+        target="_blank"
+        ><img src="facebook.svg" alt="Facebook"
+      /></a>
+      <a href="https://www.instagram.com/activ.kinetic/" target="_blank"
+        ><img src="instagram.svg" alt="Instagram"
+      /></a>
+    </div>
+  </div>
+  <p style="font-size: 0.8rem; color: #666">
+    Designed and developed by
+    <a
+      href="https://dcbytes.ro"
+      target="_blank"
+      style="text-decoration: none; color: #0073e6"
+      >dcbytes</a
+    >.
+  </p>
+</footer>

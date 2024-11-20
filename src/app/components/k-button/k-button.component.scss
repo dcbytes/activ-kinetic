@@ -1,6 +1,10 @@
 .button-and-spinner {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  &.is-not-loading {
+    align-items: baseline;
+  }
+
   width: 100%;
 
   *:not(span) {
@@ -19,5 +23,12 @@
     flex: 2;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      &.is-not-loading {
+        justify-content: center;
+      }
+    }
   }
 }

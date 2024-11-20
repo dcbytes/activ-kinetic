@@ -9,6 +9,7 @@ import { LocationComponent } from './sections/location/location.component';
 import { SeparatorComponent } from './components/separator/separator.component';
 import { ProcedureComponent } from './sections/procedure/procedure.component';
 import { EvaluateComponent } from './sections/evaluate/evaluate.component';
+import { FooterComponent } from './sections/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ import { EvaluateComponent } from './sections/evaluate/evaluate.component';
     SeparatorComponent,
     ProcedureComponent,
     EvaluateComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

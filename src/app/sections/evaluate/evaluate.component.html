@@ -63,16 +63,19 @@
           ></textarea>
         </div>
       </p-inputGroup>
+      <div class="submit-btn-container">
+        <app-k-button
+          label="Trimite"
+          type="submit"
+          [disabled]="loading || alreadySubmitted"
+          [loading]="loading"
+        ></app-k-button>
+      </div>
     </div>
 
     <div class="graphic_container">
       <img src="graphic_contact.png" alt="Evaluare" />
     </div>
   </div>
-  <app-k-button
-    label="Trimite"
-    type="submit"
-    [disabled]="loading || alreadySubmitted"
-    [loading]="loading"
-  ></app-k-button>
 </form>
+

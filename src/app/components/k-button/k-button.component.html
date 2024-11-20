@@ -6,8 +6,8 @@
   [disabled]="disabled"
   [class]="'k-button bg-primary ' + variant"
 >
-  <div class="button-and-spinner">
-    <span>
+  <div class="button-and-spinner" [ngClass]="{ 'is-not-loading': !loading }">
+    <span [ngClass]="{ 'is-not-loading': !loading }">
       {{ label }}
     </span>
     @if (loading) {
