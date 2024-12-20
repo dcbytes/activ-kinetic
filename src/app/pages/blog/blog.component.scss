@@ -124,6 +124,8 @@ $accent-color: #4caf50;
   border-radius: 5px;
   // max-width: fit-content;
   max-height: 30px;
+  display: flex;
+  align-items: center;
 }
 
 .popular-tags {
