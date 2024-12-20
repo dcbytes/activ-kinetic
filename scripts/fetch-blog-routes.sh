@@ -7,7 +7,7 @@ SCRIPT_DIR=$(dirname "$(realpath "$0")")
 ROUTES_FILE="$SCRIPT_DIR/../routes.txt"
 
 # The website API
-WEBSITE_API="http://127.0.0.1:1337/platform/api/blog/4e41971e-beb0-11ef-abdc-0242ac120002/slugs"
+WEBSITE_API="https://dcbytes.ro/platform/api/blog/4e41971e-beb0-11ef-abdc-0242ac120002/slugs"
 
 # Check if the first argument is "with-date"
 response=$(curl -s "${WEBSITE_API}")
