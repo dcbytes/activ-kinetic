@@ -1,0 +1,23 @@
+<div class="latest-article">
+  @if (!imgLoaded) {
+  <img
+    src="placeholder-image.webp"
+    alt="Blog Title"
+  />
+  }
+  <img
+    (load)="loadImage()"
+    [hidden]="!imgLoaded"
+    [src]="articleImage"
+    [alt]="articleTitle"
+  />
+  <div class="popular-article-details">
+    <a [href]="articleHref">
+      <app-article-title-ellipsis
+        [articleTitle]="articleTitle"
+        variant="h5"
+      ></app-article-title-ellipsis
+    ></a>
+    <p>{{ articleCreated | date: "longDate" }}</p>
+  </div>
+</div>

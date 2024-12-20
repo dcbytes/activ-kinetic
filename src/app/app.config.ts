@@ -5,23 +5,32 @@ import {
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
-import { routes } from './app.routes';
+import {
+  HttpClient,
+  provideHttpClient,
+  withFetch,
+  withInterceptors,
+} from '@angular/common/http';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { MessageService } from 'primeng/api';
-import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import { provideMarkdown } from 'ngx-markdown';
-import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
-import { provideLottieOptions } from 'ngx-lottie';
+import { provideStore } from '@ngxs/store';
 import player from 'lottie-web';
+import { provideLottieOptions } from 'ngx-lottie';
+import { provideMarkdown } from 'ngx-markdown';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { MessageService } from 'primeng/api';
+import { routes } from './app.routes';
+import { appStates } from './redux/app.states';
+import { baseUrlInterceptor } from './shared/interceptors/base-url.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideClientHydration(),
+    provideStore(appStates),
     provideAnimations(),
-    provideHttpClient(withFetch()),
+    provideHttpClient(withInterceptors([baseUrlInterceptor]), withFetch()),
     provideMarkdown({ loader: HttpClient }),
     provideLottieOptions({
       player: () => player,

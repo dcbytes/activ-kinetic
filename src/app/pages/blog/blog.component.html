@@ -1,0 +1,87 @@
+<!-- Main intro Blog -->
+<div class="page-container container-padding blog-page">
+  <div class="heading-blog-page">
+    <app-breadcrumb color="white" [items]="['Acasă', 'Blog']"></app-breadcrumb>
+    <h1>Blog Activ Kinetic</h1>
+    <p>
+      La <span class="bold">Activ Kinetic</span>, aducem
+      <span class="bold">kinetoterapia, fizioterapia</span> și
+      <span class="bold">masajul terapeutic</span> direct în confortul casei
+      tale, în <span class="bold">Sibiu</span> și
+      <span class="bold">Cluj-Napoca</span>. Economisește timp și beneficiază de
+      tratamente personalizate, oferite de
+      <span class="bold">specialiști dedicați</span>, fără a te deplasa la
+      clinică.
+    </p>
+  </div>
+  <!-- End of Main intro Blog -->
+
+  <!-- Articles & Popular Posts -->
+  <div class="main-container-ap">
+    <!-- Articles -->
+
+    <div class="container-articles">
+      <div class="list-articles">
+        <!-- run a loop through all of posts$ and render <app-article-display> for each !-->
+        <app-article-display
+          *ngFor="let post of posts$ | async"
+          [articleTitle]="post.title"
+          [articleTldr]="post.tldr"
+          [articleCreated]="post.created"
+          [articleImage]="post.imagePath"
+          [articleHref]="getArticleHref(post)"
+        ></app-article-display>
+      </div>
+    </div>
+
+    <!-- Popular Posts -->
+    <div class="posts-tags">
+      <div class="popular-tags">
+        <h4>Ultimele Articole</h4>
+        <hr />
+        <!-- Run a loop through all of popular$ and render <app-article-mini-preview> for each !-->
+        <app-article-mini-preview
+          *ngFor="let popular of popularPosts$ | async"
+          [articleTitle]="popular.title"
+          [articleCreated]="popular.created"
+          [articleImage]="popular.imagePath"
+          [articleHref]="getArticleHref(popular)"
+        ></app-article-mini-preview>
+      </div>
+
+      <div class="white-space-blog"></div>
+      <div class="popular-tags">
+        <h4>Taguri populare</h4>
+
+        <hr />
+        <!-- Tags -->
+        <div class="main-tags">
+          <h5 *ngFor="let tag of popularTags$ | async" class="tag">
+            #{{ tag }}
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load More Btn -->
+  <div class="button-container" *ngIf="hasMore$ | async">
+    <div class="line"></div>
+    <button class="load-more-btn" (click)="loadNextPage()">Load More</button>
+    <div class="line"></div>
+  </div>
+
+  <!-- Load More Btn -->
+
+  <!-- End of Articles & Popular Posts -->
+  <div class="ending-blog">
+    <h2>Redescoperă libertatea mișcării chiar la tine acasă!</h2>
+    <p>
+      Descoperă beneficiile recuperării la domiciliu cu
+      <span class="bold">Activ Kinetic Home</span>. Contactează-ne pentru a
+      programa o sesiune și lasă-ne să te ajutăm să redescoperi bucuria
+      mișcării! <span class="bold">Sibiu</span> |
+      <span class="bold">Cluj-Napoca</span>
+    </p>
+  </div>
+</div>

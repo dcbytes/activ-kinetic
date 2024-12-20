@@ -2,7 +2,14 @@ $colors: (
   primary: #f2994a,
   secondary: #db6e24,
   accentBackground: #f5f5f5,
+  primary-darker: #d97706,
 );
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
 
 @each $color-name, $color-value in $colors {
   .bg-#{$color-name} {

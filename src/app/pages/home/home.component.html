@@ -1,0 +1,60 @@
+<div class="main-content">
+  <app-headliner id="despre" fragment="despre"></app-headliner>
+  <div class="safe-container">
+    <div class="center">
+      <app-location></app-location>
+    </div>
+    <app-procedure
+      procedure="Despre"
+      markdownFile="sections/despre.md"
+    ></app-procedure>
+  </div>
+  <app-separator
+    id="tratamente"
+    sectionName="Proceduri și Tratamente"
+  ></app-separator>
+  <div class="procedures">
+    <div class="procedures-content">
+      <app-procedure
+        procedure="Kinetoterapie"
+        markdownFile="sections/kinetoterapie.md"
+      ></app-procedure>
+      <app-procedure
+        procedure="Fizioterapie"
+        markdownFile="sections/fizioterapie.md"
+      ></app-procedure>
+      <app-procedure
+        procedure="Terapia cu laser"
+        markdownFile="sections/terapie_laser.md"
+      ></app-procedure>
+      <app-procedure
+        procedure="Terapia cu ultrasunete"
+        markdownFile="sections/terapie_ultrasunete.md"
+      ></app-procedure>
+      <app-procedure
+        procedure="Electroterapia"
+        markdownFile="sections/electroterapia.md"
+      ></app-procedure>
+      <app-procedure
+        procedure="Masajul terapeutic"
+        markdownFile="sections/masaj.md"
+      ></app-procedure>
+    </div>
+  </div>
+  <app-separator id="evaluare" sectionName="Evaluare"></app-separator>
+  <div class="eval-container">
+    <div class="eval-content">
+      <h3>
+        Evaluarea inițială este un pas esențial în procesul de recuperare și
+        tratament. Aceasta ne permite să înțelegem în detaliu starea de sănătate
+        a fiecărui pacient, să identificăm corect problemele și să elaborăm un
+        plan de tratament personalizat și eficient. O evaluare riguroasă și
+        cuprinzătoare este fundamentul unui tratament de succes.
+      </h3>
+
+      <app-evaluate></app-evaluate>
+    </div>
+  </div>
+</div>
+
+

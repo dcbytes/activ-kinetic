@@ -1,0 +1,14 @@
+<h3 *ngIf="variant === 'h3'">
+  {{
+    articleTitle.length > 140
+      ? (articleTitle | slice: 0:140) + "..."
+      : articleTitle
+  }}
+</h3>
+<h5 *ngIf="variant === 'h5'">
+  {{
+    articleTitle.length > 140
+      ? (articleTitle | slice: 0:140) + "..."
+      : articleTitle
+  }}
+</h5>

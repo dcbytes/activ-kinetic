@@ -1,0 +1,21 @@
+<div class="breadcrumb-container">
+  <span
+    [class]="'breadcrumb-content ' + color"
+    *ngFor="let item of items; let isLast = last"
+  >
+    <ng-container *ngIf="item.label !== '<loading>'; else loading">
+      <ng-container *ngIf="item.href !== undefined; else noHref">
+        <a [href]="item.href">
+          {{ item.label }}
+        </a>
+      </ng-container>
+      <ng-template #noHref>
+        {{ item.label }}
+      </ng-template>
+    </ng-container>
+    <ng-template #loading>
+      <div class="loading-bar">&nbsp;</div>
+    </ng-template>
+    <span [class]="color" *ngIf="!isLast"> / </span>
+  </span>
+</div>

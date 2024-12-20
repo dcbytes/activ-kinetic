@@ -1,0 +1,107 @@
+<div class="page-container container-padding article-page-container">
+  <div class="article-page">
+    @if (!imgLoaded) {
+      <img src="placeholder-image.webp" alt="Blog Title" class="img-title" />
+    }
+    <img
+      (load)="loadImage()"
+      [hidden]="!imgLoaded"
+      class="img-blur"
+      [src]="post?.imagePath || 'placeholder-image.webp'"
+      alt="Blog Title"
+    />
+    <img
+      class="img-title"
+      [hidden]="!imgLoaded"
+      [src]="post?.imagePath || 'placeholder-image.webp'"
+      alt="Blog Title"
+    />
+    <div class="tldr">
+      <div class="child-tldr">
+        <div class="blog-info">
+          <div class="main-tag">
+            <h5 class="tag">
+              #
+              <ng-container *ngIf="post as post; else loading">
+                {{ post.tags[0] }}
+              </ng-container>
+              <ng-template #loading>
+                <div class="loading-bar">&nbsp;</div>
+              </ng-template>
+            </h5>
+          </div>
+          <div class="date-posted">
+            <img src="time-post.svg" alt="Date posted" />
+            <h5 class="tag">
+              <div *ngIf="!post; else content" class="loading-bar">&nbsp;</div>
+              <ng-template #content>
+                {{ post?.created | date: "longDate" }}
+              </ng-template>
+            </h5>
+          </div>
+          <!-- <div *ngIf="isEditor$ | async" class="editor-actions-container"> -->
+          <!--   <app-delete-article (onClick)="handleDelete()"></app-delete-article> -->
+          <!--   <app-update-article (onClick)="handleEdit()"></app-update-article> -->
+          <!-- </div> -->
+        </div>
+        <app-breadcrumb [items]="articleBreadcrumbs"></app-breadcrumb>
+        <h2>
+          <div *ngIf="post">
+            {{ post.title }}
+          </div>
+          <div *ngIf="!post" class="loading-bar title">&nbsp;</div>
+        </h2>
+        <div>
+          <span class="bold tldr-content"
+            >TLDR:
+
+            <div *ngIf="!post" class="loading-bar">&nbsp;</div>
+          </span>
+          <div *ngIf="!post" class="loading-content">
+            <div class="loading-bar" style="width: 70%">&nbsp;</div>
+            <div class="loading-bar" style="width: 90%">&nbsp;</div>
+            <div class="loading-bar" style="width: 50%">&nbsp;</div>
+          </div>
+          <span *ngIf="post">
+            {{ post.tldr }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="article-content">
+      <markdown *ngIf="post" [src]="post.mdContentPath"> </markdown>
+
+      <div class="main-tags">
+        <h5 class="title-tag">Tag-uri:</h5>
+        <div *ngIf="post" class="tag-container">
+          <h5 class="tag" *ngFor="let tag of post?.tags">#{{ tag }}</h5>
+        </div>
+        <div *ngIf="!post" class="loading-content">
+          <div class="loading-bar">&nbsp;</div>
+          <div class="loading-bar">&nbsp;</div>
+          <div class="loading-bar">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Read more articles -->
+  <div class="page-container container-padding container-article">
+    <div class="popular-articles">
+      <h2>Ultimele noastre articole</h2>
+      <p>
+        Ti-a placut acest articol? Iata cateva articole pe care le-ai putea
+        aprecia.
+      </p>
+    </div>
+    <div class="list-articles">
+      <app-article-display
+        *ngFor="let post of otherPosts$ | async"
+        [articleTitle]="post.title"
+        [articleTldr]="post.tldr"
+        [articleCreated]="post.created"
+        [articleImage]="post.imagePath"
+        [articleHref]="getArticleHref(post)"
+      ></app-article-display>
+    </div>
+  </div>
+</div>

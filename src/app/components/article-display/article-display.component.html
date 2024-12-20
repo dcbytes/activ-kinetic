@@ -1,0 +1,22 @@
+<a [href]="articleHref">
+  <div class="article">
+    <img
+      [src]="articleImage"
+      [alt]="articleTldr"
+      srcset=""
+      class="article-image"
+    />
+    <div class="article-details">
+      <div class="time-posted">
+        <img src="time-post.svg" alt="Time posted" />
+        <p>{{ articleCreated | date: "longDate" }}</p>
+      </div>
+      <app-article-title-ellipsis
+        [articleTitle]="articleTitle"
+      ></app-article-title-ellipsis>
+      <a class="read-more-btn" [href]="articleHref"
+        >Read More <img src="read-more-arrow.svg" alt="Read More"
+      /></a>
+    </div>
+  </div>
+</a>

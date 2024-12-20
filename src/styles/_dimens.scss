@@ -1,0 +1,41 @@
+$horizontal-padding: 56px;
+$navbar-height: 72px;
+$navbar-top-spacing: 15px;
+
+$breakpoints: (
+  sm: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$container-paddings: (
+  md: 50px 56px,
+  sm: 30px 20px,
+);
+
+div {
+  box-sizing: border-box;
+}
+
+.container-padding {
+  padding: map-get($container-paddings, md);
+  padding-top: 0;
+}
+
+@media (max-width: map-get($breakpoints, sm)) {
+  .container-padding {
+    padding: map-get($container-paddings, sm);
+    // padding-top: calc($navbar-height + $navbar-top-spacing);
+    padding-top: 0;
+  }
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+

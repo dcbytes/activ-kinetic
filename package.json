@@ -2,6 +2,8 @@
   "name": "activ-kinetic",
   "version": "0.0.0",
   "scripts": {
+    "generate-routes": "./scripts/fetch-blog-routes.sh",
+    "sync-sitemap": "./scripts/sync-sitemap-routes.sh",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -21,6 +23,7 @@
     "@angular/platform-server": "^18.1.0",
     "@angular/router": "^18.1.0",
     "@angular/ssr": "^18.1.3",
+    "@ngxs/store": "^18.0.0",
     "express": "^4.18.2",
     "marked": "^12.0.2",
     "ngx-lottie": "^12.0.0",

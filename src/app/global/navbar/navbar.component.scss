@@ -24,12 +24,12 @@
   gap: 2rem;
 }
 
-@media screen and (min-width: 1028px) {
-  .navbar.scrolled {
-    transition: all 0.3s;
-    transform: translateY(-100%);
-  }
-}
+// @media screen and (min-width: 1028px) {
+//   .navbar.scrolled {
+//     transition: all 0.3s;
+//     transform: translateY(-100%);
+//   }
+// }
 
 @media screen and (max-width: 1028px) {
   .navbar {
