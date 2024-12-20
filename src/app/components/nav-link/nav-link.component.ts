@@ -13,4 +13,5 @@ export class NavLinkComponent {
   @Input() text: string;
   @Input() icon: string;
   @Input() activeRoute: boolean;
+  @Input() isExternal: boolean;
 }

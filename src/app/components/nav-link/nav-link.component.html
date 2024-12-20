@@ -1,5 +1,5 @@
 <a [href]="link" pageScroll class="nav-link-anchor">
-  <div class="nav-link" [ngClass]="{ active: activeRoute }">
+  <div class="nav-link" [ngClass]="{ active: activeRoute && !isExternal }">
     <i [class]="icon"></i>
     <span>{{ text }}</span>
     <hr/>

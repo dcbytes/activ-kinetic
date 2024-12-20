@@ -3,6 +3,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { NavLinkComponent } from '../../components/nav-link/nav-link.component';
 import { Subscription } from 'rxjs';
 import { NavigationEnd, Router } from '@angular/router';
+import { isExternal } from 'util/types';
 
 @Component({
   selector: 'app-navbar',
@@ -24,6 +25,12 @@ export class NavbarComponent implements OnInit {
 
   // Declare the nav links
   navLinks = [
+    {
+      link: '/blog',
+      text: 'Blog',
+      icon: 'pi pi-objects-column',
+      isExternal: true,
+    },
     { link: '#despre', text: 'Despre', icon: 'pi pi-info-circle' },
     { link: '#tratamente', text: 'Tratamente', icon: 'pi pi-plus-circle' },
     { link: '#evaluare', text: 'Evaluare', icon: 'pi pi-check-square' },
