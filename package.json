@@ -6,7 +6,7 @@
     "sync-sitemap": "./scripts/sync-sitemap-routes.sh",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run generate-routes && npm run sync-sitemap && ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:activ-kinetic": "node dist/activ-kinetic/server/server.mjs"
