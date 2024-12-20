@@ -11,6 +11,6 @@ WEBSITE_API="http://127.0.0.1:1337/platform/api/blog/4e41971e-beb0-11ef-abdc-024
 
 # Check if the first argument is "with-date"
 response=$(curl -s "${WEBSITE_API}")
-echo "$response" | tr -d '[]"' | tr ',' '\n' | sed 's/^/\/blog\//' >$ROUTES_FILE
-
-
+if [ "$response" != "[]" ]; then
+  echo "$response" | tr -d '[]"' | tr ',' '\n' | sed 's/^/\/blog\//' >$ROUTES_FILE
+fi
